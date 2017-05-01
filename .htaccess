@@ -1,0 +1,6 @@
+Options -Indexes
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^helfer.tuttifrutti-lager.de$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.helfer.tuttifrutti-lager.t$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
